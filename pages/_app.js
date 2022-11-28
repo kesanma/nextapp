@@ -44,14 +44,12 @@ function Auth({ children, adminOnly }) {
 function App() {
   const tawkMessengerRef = useRef();
 
-  const handleMinimize () => {
-      tawkMessengerRef.current.minimize();
+ 
       const onLoad = () => {
         console.log('onLoad works!');
     };
   return (
     <div className="App">
-    <button onClick={handleMinimize}> Minimize the Chat </button>
       <TawkMessengerReact
         propertyId="6384095bdaff0e1306d9b847"
         widgetId="1gits94i1"
