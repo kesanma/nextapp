@@ -8,7 +8,6 @@ import { Menu } from '@headlessui/react';
 import 'react-toastify/dist/ReactToastify.css';
 import { Store } from '../utils/Store';
 import DropdownLink from './DropdownLink';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
 
@@ -105,10 +104,6 @@ export default function Layout({ title, children }) {
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
           <p>Copyright © 2022 Amazona</p>
-          <MessengerCustomerChat
-            pageId="110501698558413"
-            appId="692692862512802"
-          />
         </footer>
       </div>
     </>
