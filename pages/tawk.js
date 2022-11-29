@@ -1,5 +1,5 @@
 import Script from 'next/script';
-function Tawkapp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
@@ -9,10 +9,9 @@ function Tawkapp({ Component, pageProps }) {
               (function(){
               var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
               s1.async=true;
-              s1.src='https://embed.tawk.to/[6384095bdaff0e1306d9b847]/[1gits94i1]';
+              s1.src='https://embed.tawk.to/6384095bdaff0e1306d9b847/1gits94i1';
               s1.charset='UTF-8';
-              s1.setAttributy
-              e('crossorigin','*');
+              s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1,s0);
               })();  
           `}
@@ -21,4 +20,4 @@ function Tawkapp({ Component, pageProps }) {
   );
 }
 
-export default Tawkapp;
+export default MyApp;
