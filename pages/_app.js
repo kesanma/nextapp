@@ -3,8 +3,6 @@ import { SessionProvider, useSession } from 'next-auth/react';
 import { StoreProvider } from '../utils/Store';
 import { useRouter } from 'next/router';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
-import { useRef } from 'react';
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
@@ -41,21 +39,4 @@ function Auth({ children, adminOnly }) {
   return children;
 }
 
-function App() {
-  const tawkMessengerRef = useRef();
-
- 
-      const onLoad = () => {
-        console.log('onLoad works!');
-    };
-  return (
-    <div className="App">
-      <TawkMessengerReact
-        propertyId="6384095bdaff0e1306d9b847"
-        widgetId="1gits94i1"
-      />
-    </div>
-  );
-}
-}
 export default MyApp;
