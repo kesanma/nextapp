@@ -6,7 +6,7 @@ import ProductItem from '../components/ProductItem';
 import Product from '../models/Product';
 import db from '../utils/db';
 import { Store } from '../utils/Store';
-
+<iframe src="/public/index.html" width="100%"></iframe>;
 export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
