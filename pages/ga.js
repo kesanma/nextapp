@@ -1,30 +1,27 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import * as ga from '../lib/ga';
 
-export default function Home() {
-  const [query, setQuery] = useState('');
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
 
-  const search = () => {
-    ga.event({
-      action: 'search',
-      params: {
-        search_term: query,
-      },
-    });
-  };
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url);
+    };
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange);
 
-  return (
-    <div>
-      <div>
-        <input
-          type="text"
-          onChange={(event) => setQuery(event.target.value)}
-        ></input>
-      </div>
-      <div>
-        <button onClick={() => search()}>Search</button>
-      </div>
-    </div>
-  );
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  return <Component {...pageProps} />;
 }
+
+export default MyApp;
