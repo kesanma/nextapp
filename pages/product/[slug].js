@@ -8,6 +8,18 @@ import Layout from '../../components/Layout';
 import Product from '../../models/Product';
 import db from '../../utils/db';
 import { Store } from '../../utils/Store';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  RedditShareButton,
+  RedditIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from 'next-share';
 
 export default function ProductScreen(props) {
   const { product } = props;
@@ -57,6 +69,23 @@ export default function ProductScreen(props) {
             </li>
             <li>Description: {product.description}</li>
           </ul>
+        </div>
+        <div>
+          <FacebookShareButton url={'https://day-xa-hoi.vercel.app'}>
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+          <PinterestShareButton url={'https://day-xa-hoi.vercel.app'}>
+            <PinterestIcon size={32} round />
+          </PinterestShareButton>
+          <RedditShareButton url={'https://day-xa-hoi.vercel.app'}>
+            <RedditIcon size={32} round />
+          </RedditShareButton>
+          <WhatsappShareButton url={'https://day-xa-hoi.vercel.app'}>
+            <WhatsappIcon size={32} round />
+          </WhatsappShareButton>
+          <LinkedinShareButton url={'https://day-xa-hoi.vercel.app'}>
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
         </div>
         <div>
           <div className="card p-5">
