@@ -71,19 +71,29 @@ export default function ProductScreen(props) {
           </ul>
         </div>
         <div>
-          <FacebookShareButton url={'https://day-xa-hoi.vercel.app'}>
+          <FacebookShareButton
+            url={'https://day-xa-hoi.vercel.app/product/product.slug'}
+          >
             <FacebookIcon size={32} round />
           </FacebookShareButton>
-          <PinterestShareButton url={'https://day-xa-hoi.vercel.app'}>
+          <PinterestShareButton
+            url={'https://day-xa-hoi.vercel.app/product/product/product.slug'}
+          >
             <PinterestIcon size={32} round />
           </PinterestShareButton>
-          <RedditShareButton url={'https://day-xa-hoi.vercel.app'}>
+          <RedditShareButton
+            url={'https://day-xa-hoi.vercel.app/product/product.slug'}
+          >
             <RedditIcon size={32} round />
           </RedditShareButton>
-          <WhatsappShareButton url={'https://day-xa-hoi.vercel.app'}>
+          <WhatsappShareButton
+            url={'https://day-xa-hoi.vercel.app/product/product.slug'}
+          >
             <WhatsappIcon size={32} round />
           </WhatsappShareButton>
-          <LinkedinShareButton url={'https://day-xa-hoi.vercel.app'}>
+          <LinkedinShareButton
+            url={'https://day-xa-hoi.vercel.app/product/product.slug'}
+          >
             <LinkedinIcon size={32} round />
           </LinkedinShareButton>
         </div>
