@@ -90,7 +90,6 @@ export default function ProductScreen(props) {
           >
             <LinkedinIcon size={32} round />
           </LinkedinShareButton>
-          <div id="fb-root"></div>
         </div>
         <div>
           <div className="card p-5">
