@@ -40,4 +40,3 @@ function Auth({ children, adminOnly }) {
 
   return children;
 }
-export default MyApp;

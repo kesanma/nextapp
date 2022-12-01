@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import * as ga from '../lib/ga';
 
-function MyApp({ Component, pageProps }) {
+function GA({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
@@ -23,5 +23,4 @@ function MyApp({ Component, pageProps }) {
 
   return <Component {...pageProps} />;
 }
-
-export default MyApp;
+export default GA;
