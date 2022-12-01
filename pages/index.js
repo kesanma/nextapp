@@ -6,9 +6,7 @@ import ProductItem from '../components/ProductItem';
 import Product from '../models/Product';
 import db from '../utils/db';
 import { Store } from '../utils/Store';
-import { useState } from 'react';
 
-import * as ga from '../lib/ga';
 export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
